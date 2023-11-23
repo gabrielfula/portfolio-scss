@@ -1,0 +1,12 @@
+.container {
+  padding: 10rem 7rem;
+  height: 100%;
+  width: 100%;
+
+  .contentProjetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+}

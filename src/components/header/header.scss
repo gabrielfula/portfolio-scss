@@ -1,0 +1,86 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 4rem;
+  gap: 2rem;
+
+  .contentNavbar {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    .icons {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}
+
+.buttonPosition {
+  width: 3rem;
+  position: fixed;
+  border-radius: 50%;
+  background: #593d3b;
+  color: #fafafa;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 1rem;
+  top: 10px;
+  z-index: 1001;
+
+  .button {
+    width: 100%;
+
+    &::after,
+    &::before {
+      position: relative;
+      content: "";
+      display: block;
+      background: #fafafa;
+      height: 1px;
+      width: 40%;
+      z-index: 99;
+      margin: auto;
+      transition: all 0.8s;
+    }
+    &::after {
+      top: -3px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .buttonActive {
+    width: 100%;
+
+    &::after,
+    &::before {
+      position: relative;
+      content: "";
+      display: block;
+      z-index: 99;
+      background: #fafafa;
+      height: 1px;
+      width: 40%;
+      margin: auto;
+      transition: all 0.5s;
+    }
+
+    &::after {
+      top: -1px;
+      transform: rotate(45deg);
+      width: 50%;
+    }
+
+    &::before {
+      top: 1px;
+      transform: rotate(-45deg);
+      width: 50%;
+    }
+  }
+}
